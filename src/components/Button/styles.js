@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-export const StyledButton = styled.button(({ theme }) => css`
+export const StyledButton = styled.button(({ theme, margin }) => css`
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 ${margin || 0};
   border: 1px solid ${theme.accent};
   border-radius: 3px;
   background: transparent;

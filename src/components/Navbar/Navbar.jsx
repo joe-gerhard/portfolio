@@ -13,7 +13,7 @@ const Navbar = ({ executeScroll, aboutRef, experienceRef, projectsRef, contactRe
       <StyledLink onClick={() => executeScroll(experienceRef)}>Experience</StyledLink>
       <StyledLink onClick={() => executeScroll(projectsRef)}>Projects</StyledLink>
       <StyledLink onClick={() => executeScroll(contactRef)}>Contact</StyledLink>
-      <Button onClick={handleOpenResume}>Resumé</Button>
+      <Button onClick={handleOpenResume} margin={'10px'}>Resumé</Button>
     </StyledNav>
 
   )

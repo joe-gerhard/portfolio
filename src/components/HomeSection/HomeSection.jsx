@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledHomeSection } from './styles';
+import { StyledHomeSection, Card } from './styles';
 import Button from '../Button';
 
 const HomeSection = ({ homeRef }) => {
@@ -10,12 +10,14 @@ const HomeSection = ({ homeRef }) => {
 
   return (
     <StyledHomeSection ref={homeRef}>
-      <h2>Hi, my name is</h2>
-      <h1>Joe Gerhard</h1>
-      <p>
-       I'm a front end developer based in Austin, TX.
-      </p>
-      <Button onClick={handleEmailMe}>Get in Touch</Button>
+      <Card>
+        <h3>Hi, my name is</h3>
+        <h1>Joe Gerhard</h1>
+        <p>
+        I'm a web developer based in Austin, TX with a professional background in the music industry including lighting design, audio production, stage management, and tour management.
+        </p>
+        <Button onClick={handleEmailMe}>Get in Touch</Button>
+      </Card>
     </StyledHomeSection>
   )
 }

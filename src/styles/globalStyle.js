@@ -60,8 +60,8 @@ table {
   border-spacing: 0;
 }
 
-h1 { 
-  font-size: 60px;
+h1 {
+  font-size: 36px;
 }
 `
 
