@@ -7,5 +7,5 @@ export const Section = styled.section(({ theme }) => css`
   justify-content: flex-start;
   height: 100vh;
   padding: 50px;
-  color: ${theme.dark}
+  color: ${theme.dark};
 `);

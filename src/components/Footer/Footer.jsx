@@ -4,7 +4,7 @@ import { StyledNav } from './styles';
 const Footer = ({ executeScroll, homeRef, aboutRef, projectsRef }) => {
   return (
     <StyledNav>
-      JLGerhard@gmail.com
+      Designed and Built by Joe Gerhard
     </StyledNav>
 
   )

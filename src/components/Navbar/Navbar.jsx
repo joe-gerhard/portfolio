@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledNav, StyledLink } from './styles';
+import Button from '../Button';
 
 const Navbar = ({ executeScroll, aboutRef, experienceRef, projectsRef, contactRef }) => {
   return (
@@ -8,7 +9,7 @@ const Navbar = ({ executeScroll, aboutRef, experienceRef, projectsRef, contactRe
       <StyledLink onClick={() => executeScroll(experienceRef)}>Experience</StyledLink>
       <StyledLink onClick={() => executeScroll(projectsRef)}>Projects</StyledLink>
       <StyledLink onClick={() => executeScroll(contactRef)}>Contact</StyledLink>
-      <button>Resumé</button>
+      <Button>Resumé</Button>
     </StyledNav>
 
   )
