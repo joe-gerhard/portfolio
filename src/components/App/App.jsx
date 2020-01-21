@@ -17,7 +17,7 @@ const App = () => {
   const refs = { aboutRef, experienceRef, projectsRef, contactRef }
 
   const executeScroll = (ref) => {
-    window.scrollTo(0, ref.current.offsetTop)
+    ref.current.scrollIntoView({behavior: 'smooth'})
   }
 
   return (
