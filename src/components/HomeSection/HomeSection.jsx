@@ -10,7 +10,6 @@ const HomeSection = ({ homeRef }) => {
 
   return (
     <StyledHomeSection ref={homeRef}>
-      
       <h2>Hi, my name is</h2>
       <h1>Joe Gerhard</h1>
       <p>
