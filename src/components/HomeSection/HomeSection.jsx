@@ -3,6 +3,11 @@ import { StyledHomeSection } from './styles';
 import Button from '../Button';
 
 const HomeSection = ({ homeRef }) => {
+  
+  const handleEmailMe = () => {
+    window.open('mailto:JLGerhard@gmail.com', '_blank');
+  }
+
   return (
     <StyledHomeSection ref={homeRef}>
       
@@ -11,7 +16,7 @@ const HomeSection = ({ homeRef }) => {
       <p>
        I'm a front end developer based in Austin, TX.
       </p>
-      <Button>Get in Touch</Button>
+      <Button onClick={handleEmailMe}>Get in Touch</Button>
     </StyledHomeSection>
   )
 }

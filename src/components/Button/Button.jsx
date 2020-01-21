@@ -1,11 +1,20 @@
 import React from 'react'
 import { StyledButton } from './styles'
 
-const Button = ({ children }) => {
+const Button = ({ children, href, onClick }) => {
   return (
-    <StyledButton>
-      {children}
-    </StyledButton>
+    <>
+      { href 
+        ?
+        <StyledButton as="a" href={href}>
+          {children}
+        </StyledButton>
+        :
+        <StyledButton onClick={onClick}>
+          {children}
+        </StyledButton>
+      }
+    </>
   )
 }
 
