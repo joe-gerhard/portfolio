@@ -19,7 +19,7 @@ const AboutSection = ({ aboutRef }) => {
         <Text>
           <p>
           I come from a career in the event production industry, so I'm no stranger to bizarre 
-          and ever-changing problems to tackle. I write clean code, have an eye for design, value quality relationships; and 
+          and ever-changing problems to tackle. I write clean code, have an eye for design, value quality relationships, and 
           there's nothing I love more than the feeling of a hard job well done. At every position 
           I've ever held, I've always been the "fastest-anyone's-ever-caught-on-to-this" kind 
           of person, and I take great pride in continuing that legacy. 

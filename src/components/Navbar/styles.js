@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
 
 export const StyledNav = styled.nav(({ theme }) => css`
+  position: fixed;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
