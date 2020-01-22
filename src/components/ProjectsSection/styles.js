@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
 export const StyledProjectsSection = styled(Section)(({ theme }) => css`
+
   h1 { 
     width: 100%;
     padding-bottom: 5px;
@@ -20,7 +21,7 @@ export const Project = styled.div(({ theme }) => css`
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
-  margin: 40px 0;
+  margin: 40px 0 100px 0;
 
   h2 {
     font-size: 24px;
@@ -30,8 +31,8 @@ export const Project = styled.div(({ theme }) => css`
 
   img {
     object-fit: cover;
-    width: 50%;
     height: 350px;
+    width: 1000px;
     filter: grayscale(1);
     transition: .5s;
 
