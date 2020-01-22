@@ -13,3 +13,77 @@ export const StyledProjectsSection = styled(Section)(({ theme }) => css`
     line-height: 24px;
   }
 `);
+
+export const Project = styled.div(({ theme }) => css`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 40px 0;
+
+  h2 {
+    font-size: 24px;
+    text-align: right;
+    margin-top: 30px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 50%;
+    height: 350px;
+    filter: grayscale(1);
+    transition: .5s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+`);
+
+export const Description = styled.div(({ theme }) => css`
+  position: absolute;
+  display: flex;
+  border-radius: 3px;
+  line-height: 20px;
+  top: 30%;
+  right: 0;
+  width: 50%;
+  z-index: 1;
+  padding: 40px;
+  background: ${theme.primary};
+`);
+
+export const Text = styled.div`
+  width: 100%;
+`;
+
+export const Technologies = styled.div`
+  margin-top: 36%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  line-height: 20px;
+
+  span {
+    font-size: 12px;
+    margin: 0 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+`;
+
+export const Icons = styled.div(({ theme }) => css`
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 40px;
+
+  a {
+    color: ${theme.dark};
+    margin: 0 5px;
+  }
+`);

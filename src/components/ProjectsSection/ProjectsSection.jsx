@@ -1,16 +1,34 @@
 import React from 'react'
-import { StyledProjectsSection } from './styles';
+import { StyledProjectsSection, Project, Description, Text, Technologies, Icons } from './styles';
+import { PROJECTS } from '../../constants/projects';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectsSection = ({ projectsRef }) => {
   return (
     <StyledProjectsSection ref={projectsRef}>
       <h1>Projects</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptates earum! Tempore debitis inventore odit temporibus id blanditiis pariatur adipisci quisquam laborum voluptatibus? Maiores consequatur et, cumque similique impedit dolor.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem ab pariatur officiis, nulla repellendus obcaecati? Voluptas blanditiis accusantium fuga itaque optio. Eligendi, fugiat quasi. Odio deleniti quas quaerat nobis.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ad, deleniti doloremque est quos soluta aliquam debitis voluptate facere eius, nam labore dolores voluptatum eveniet, ut corporis quaerat distinctio! Magnam.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore amet sunt vel dicta nulla nostrum minima earum voluptates, tempora suscipit quo est, consequatur accusamus hic possimus quas et ea deleniti.
-      </p>
+      {PROJECTS.map(project => 
+        <Project key={project.name}>
+          <img src={project.image} alt={project.name} />
+          <Text>
+            <h2>{project.name}</h2>
+            <Description>
+              {project.description}
+            </Description>
+            <Technologies>
+             {project.technologies.map(tech => 
+              <span key={tech}>{tech}</span>
+              )} 
+            </Technologies>
+            <Icons>
+              <a href="https://www.github.com/joe-gerhard" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://mtg-pick-order.herokuapp.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+            </Icons>
+          </Text>
+        </Project>
+      )}
     </StyledProjectsSection>
   )
 }

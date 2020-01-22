@@ -13,13 +13,13 @@ export const StyledSocialBar = styled.div(({ theme }) => css`
   a {
     position: relative;
     bottom: 0;
-    color: ${theme.dark + '55'};
+    color: ${theme.light};
     font-size: 24px;
     margin: 5px 0;
     transition: .3s;
 
     &:hover {
-      color: ${theme.dark};
+      color: ${theme.accent};
       bottom: 3px;
     }
 
