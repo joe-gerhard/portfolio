@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
 export const StyledAboutSection = styled(Section)(({ theme }) => css`
-
+  width: 100%;
+  
   h1 { 
     width: 100%;
     padding-bottom: 5px;
@@ -10,9 +11,19 @@ export const StyledAboutSection = styled(Section)(({ theme }) => css`
   }
 `);
 
+export const Card = styled.div(({ theme }) => css`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 40px 0;
+  width: 100%;
+`);
+
 export const Text =  styled.div(({ theme }) => css`
   display: flex;
   flex-direction: column;
+  width: 60%;
+
   div {
     display: flex;
   }
@@ -34,20 +45,16 @@ export const Text =  styled.div(({ theme }) => css`
   }
 `);
 
-export const Card = styled.div(({ theme }) => css`
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 40px 0;
-`);
-
 export const ImageContainer = styled.div(({ theme, hover }) => css`
   position: relative;
+  width: 40%;
 
   img {
     filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};
     transition: 2s;
-    object-fit: none;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
   }
 
   div {

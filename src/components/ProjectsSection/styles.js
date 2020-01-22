@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
 export const StyledProjectsSection = styled(Section)(({ theme }) => css`
+  width: 100%;
 
   h1 { 
     width: 100%;

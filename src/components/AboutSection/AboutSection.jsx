@@ -9,7 +9,6 @@ const AboutSection = ({ aboutRef }) => {
     <StyledAboutSection 
       ref={aboutRef}
     >
-      
       <h1>About me</h1>
       <Card 
       onMouseEnter={() => setHover(true)} 
