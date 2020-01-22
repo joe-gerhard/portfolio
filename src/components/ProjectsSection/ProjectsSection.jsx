@@ -18,7 +18,7 @@ const ProjectsSection = ({ projectsRef }) => {
           onMouseEnter={() => setHover(project.name)}
           onMouseLeave={() => setHover('')}
         >
-          <ImageContainer hover={hover === project.name}>
+          <ImageContainer hover={hover === project.name} onClick={() => window.open(project.link)}>
             <img src={project.image} alt={project.name} />
             <div />
           </ImageContainer>

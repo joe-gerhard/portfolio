@@ -105,6 +105,10 @@ export const ImageContainer = styled.div(({ theme, hover }) => css`
   height: 350px;
   overflow: hidden;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   img {
     object-fit: cover;
     filter: grayscale(${hover ? 0 : 1});
