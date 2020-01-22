@@ -4,7 +4,7 @@ import HomeSection from '../HomeSection/HomeSection';
 import AboutSection from '../AboutSection/AboutSection';
 import ProjectsSection from '../ProjectsSection/ProjectsSection';
 import Footer from '../Footer';
-import { StyledApp } from './styles';
+import { StyledApp, Sections } from './styles';
 import ExperienceSection from '../ExperienceSection/ExperienceSection';
 import ContactSection from '../ContactSection/ContactSection';
 import SocialBar from '../SocialBar';
@@ -50,13 +50,13 @@ const App = () => {
     <StyledApp>
       <SocialBar />
       <Navbar executeScroll={executeScroll} {...refs} visible={visible}/>
-      <div>
+      <Sections>
         <HomeSection {...refs} />
         <AboutSection {...refs}/>
         <ExperienceSection {...refs}/>
         <ProjectsSection {...refs}/>
         <ContactSection {...refs}/>
-      </div>
+      </Sections>
       <Footer executeScroll={executeScroll} {...refs}/>
     </StyledApp>
   );

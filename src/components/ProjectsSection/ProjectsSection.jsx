@@ -13,7 +13,7 @@ const ProjectsSection = ({ projectsRef }) => {
         <Project key={project.name}>
           <img src={project.image} alt={project.name} />
           <Text>
-            <h2>{project.name}</h2>
+            <h2><a href={project.link} target="_blank" rel="noopener noreferrer">{project.name}</a></h2>
             <Description>
               {project.description}
             </Description>
@@ -23,8 +23,8 @@ const ProjectsSection = ({ projectsRef }) => {
               )} 
             </Technologies>
             <Icons>
-              <a href="https://www.github.com/joe-gerhard" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="https://mtg-pick-order.herokuapp.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href={project.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
             </Icons>
           </Text>
         </Project>

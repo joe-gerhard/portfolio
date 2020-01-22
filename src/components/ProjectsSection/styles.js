@@ -27,12 +27,24 @@ export const Project = styled.div(({ theme }) => css`
     font-size: 24px;
     text-align: right;
     margin-top: 30px;
+    font-weight: 900;
+  }
+
+  a {
+    color: ${theme.dark};
+    transition: .3s;
+
+    &:hover {
+      color: ${theme.accent};
+      cursor: pointer;
+    }
   }
 
   img {
     object-fit: cover;
     height: 350px;
     width: 1000px;
+    max-width: 50%;
     filter: grayscale(1);
     transition: .5s;
 
