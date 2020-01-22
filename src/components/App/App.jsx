@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navbar from '../Navbar';
 import HomeSection from '../HomeSection/HomeSection';
 import AboutSection from '../AboutSection/AboutSection';
@@ -8,8 +8,33 @@ import { StyledApp } from './styles';
 import ExperienceSection from '../ExperienceSection/ExperienceSection';
 import ContactSection from '../ContactSection/ContactSection';
 import SocialBar from '../SocialBar';
+import { useState } from 'react';
 
 const App = () => {
+
+  const [ prevScrollY, setPrevScrollY ] = useState(0);
+  const [ visible, setVisible ] = useState(true);
+
+  const handleScroll = () => {
+    const DELTA = 5;
+    const currentScrollY = window.scrollY;
+    const visible = prevScrollY > currentScrollY;
+
+    // if the user scrolls less than the value of DELTA, do nothing
+    if(Math.abs(prevScrollY - currentScrollY) <= DELTA) {
+      return 
+    }
+    
+    setPrevScrollY(currentScrollY);
+    setVisible(visible);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll, { passive: true});
+    }
+  });
 
   const aboutRef = useRef();
   const experienceRef = useRef();
@@ -24,7 +49,7 @@ const App = () => {
   return (
     <StyledApp>
       <SocialBar />
-      <Navbar executeScroll={executeScroll} {...refs}/>
+      <Navbar executeScroll={executeScroll} {...refs} visible={visible}/>
       <div>
         <HomeSection {...refs} />
         <AboutSection {...refs}/>

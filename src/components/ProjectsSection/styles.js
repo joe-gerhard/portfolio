@@ -85,7 +85,15 @@ export const Icons = styled.div(({ theme }) => css`
   height: 40px;
 
   a {
+    position: relative;
+    bottom: 0;
     color: ${theme.dark};
     margin: 0 5px;
+    transition: .3s;
+
+    &:hover {
+      color: ${theme.accent};
+      bottom: 3px;
+    }
   }
 `);

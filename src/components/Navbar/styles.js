@@ -1,15 +1,16 @@
 import styled, { css } from 'styled-components';
 
-export const StyledNav = styled.nav(({ theme }) => css`
+export const StyledNav = styled.nav(({ theme, visible }) => css`
   position: fixed;
-  top: 0;
-  z-index: 1;
+  top: ${visible ? '0' : '-50px'};
+  z-index: 100;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background: ${theme.primary};
   height: 50px;
   width: 100vw;
+  transition: .5s;
 
   &:hover {
     cursor: default;
