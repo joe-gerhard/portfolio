@@ -18,12 +18,12 @@ export const StyledNav = styled.nav(({ theme }) => css`
 
 export const StyledLink = styled.span(({ theme }) => css`
   margin: 0 10px;
-  color: ${theme.dark};
+  color: ${theme.light};
   transition: .5s;
 
   &:hover {
     cursor: pointer;
-    color: ${theme.light};
+    color: ${theme.accent};
   }
 
   &:last-child {

@@ -53,6 +53,7 @@ export const Description = styled.div(({ theme }) => css`
   z-index: 1;
   padding: 40px;
   background: ${theme.primary};
+  color: ${theme.light};
 `);
 
 export const Text = styled.div`

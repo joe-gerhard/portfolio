@@ -38,6 +38,7 @@ export const ExpButton = styled.button(({ theme, selected }) => css`
 
   &:hover {
     background: ${theme.accent + '55'};
+    color: ${theme.dark};
   }
 `);
 
