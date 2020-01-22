@@ -1,12 +1,17 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
-export const StyledExperienceSection = styled(Section)`
+export const StyledExperienceSection = styled(Section)(({ theme }) => css`
   p {
     padding: 40px;
     line-height: 24px;
   }
-`;
+
+  h1 {
+    width: 70%;
+    border-bottom: 1px solid ${theme.dark};
+  }
+`);
 
 export const ExperienceWrapper = styled.div(({ theme }) => css`
   display: flex;
@@ -38,5 +43,25 @@ export const ExpButton = styled.button(({ theme, selected }) => css`
 
 export const StyledDescription = styled.div(({ theme }) => css`
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
+  color: ${theme.dark};
+
+  h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    border: none;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 20px;
+  }
+  li {
+    margin: 10px 0;
+  }
 `);

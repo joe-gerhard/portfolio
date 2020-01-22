@@ -7,8 +7,8 @@ const Description = ({ selected }) => {
   
   return (  
     <StyledDescription>
-      <h2>{job.title}</h2>
-      <h3>{job.location} | {job.dates}</h3>
+      <h1>{job.title}</h1>
+      <h2>{job.location} | {job.dates}</h2>
       <ul>
         { job.description.map(bullet => 
           <li key ={bullet}>{bullet}</li>

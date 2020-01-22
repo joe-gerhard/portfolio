@@ -7,6 +7,7 @@ import Footer from '../Footer';
 import { StyledApp } from './styles';
 import ExperienceSection from '../ExperienceSection/ExperienceSection';
 import ContactSection from '../ContactSection/ContactSection';
+import SocialBar from '../SocialBar';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <StyledApp>
+      <SocialBar />
       <Navbar executeScroll={executeScroll} {...refs}/>
       <div>
         <HomeSection {...refs} />
