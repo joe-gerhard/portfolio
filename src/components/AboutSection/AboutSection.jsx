@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyledAboutSection } from './styles';
+import { StyledAboutSection, Text, Card } from './styles';
 
 const AboutSection = ({ aboutRef }) => {
 
@@ -12,18 +12,44 @@ const AboutSection = ({ aboutRef }) => {
     >
       
       <h1>About me</h1>
-      <div 
+      <Card 
       onMouseEnter={() => setHover(true)} 
       onMouseLeave={() => setHover(false)}
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptates earum! Tempore debitis inventore odit temporibus id blanditiis pariatur adipisci quisquam laborum voluptatibus? Maiores consequatur et, cumque similique impedit dolor.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem ab pariatur officiis, nulla repellendus obcaecati? Voluptas blanditiis accusantium fuga itaque optio. Eligendi, fugiat quasi. Odio deleniti quas quaerat nobis.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ad, deleniti doloremque est quos soluta aliquam debitis voluptate facere eius, nam labore dolores voluptatum eveniet, ut corporis quaerat distinctio! Magnam.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore amet sunt vel dicta nulla nostrum minima earum voluptates, tempora suscipit quo est, consequatur accusamus hic possimus quas et ea deleniti.
-        </p>
+        <Text>
+          <p>
+          I come from a career in the event production industry, so I'm no stranger to bizarre 
+          and ever-changing problems to tackle. I'm good with code, design, and relationships; and 
+          there's nothing I love more than the feeling of a hard job well done. At every position 
+          I've ever held, I've always been the "fastest-anyone's-ever-caught-on-to-this" kind 
+          of person, and I take great pride in continuing that legacy. 
+          </p>
+          <p>
+          Last year I graduated at the top of my class from a software engineering boot camp, and
+          have since continued to teach myself many new technologies. I'm an extremely fast learner,
+          highly motivated, and have always been a high achiever--I was a full-ride academic scholar
+          at my university, for example. 
+          </p>
+          
+          <span>Some of my favorite technologies to work with are:</span>
+          
+          <div>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Express</li>
+            </ul>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>Node.js</li>
+              <li>styled-components</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </Text>
         <img src="/Small-Square.png" alt="Joe Gerhard" />
-      </div>
+      </Card>
     </StyledAboutSection>
   )
 }

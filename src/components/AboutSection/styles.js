@@ -9,18 +9,40 @@ export const StyledAboutSection = styled(Section)(({ theme, hover }) => css`
     border-bottom: 1px solid ${theme.dark};
   }
 
+  img {
+    filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};
+    transition: 2s;
+    object-fit: none;
+  }
+`);
+
+export const Text =  styled.div(({ theme }) => css`
+  display: flex;
+  flex-direction: column;
   div {
     display: flex;
-    margin: 40px 0;
   }
 
   p {
     padding-right: 40px;
     line-height: 24px;
+    margin-bottom: 20px;
   }
 
-  img {
-    filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};
-    transition: 1s;
+  span {
+    margin-bottom: 10px;
   }
+
+  ul {
+    margin: 0 30px;
+    line-height: 24px;
+    list-style: inside;
+  }
+`);
+
+export const Card = styled.div(({ theme }) => css`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 40px 0;
 `);

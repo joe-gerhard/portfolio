@@ -14,7 +14,7 @@ const ContactSection = ({ contactRef }) => {
       <p>
         I am actively seeking new work opportinities, so please feel free to contact me at any time. Looking forward to hearing from you!
       </p>
-      <Button onClick={handleEmailMe}>Email Me</Button>
+      <Button onClick={handleEmailMe}>Email</Button>
     </StyledContactSection>
   )
 }
