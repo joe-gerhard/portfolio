@@ -112,6 +112,7 @@ export const ImageContainer = styled.div(({ theme, hover }) => css`
   img {
     object-fit: cover;
     filter: grayscale(${hover ? 0 : 1});
+    opacity: ${hover ? 1 : .1};
     width: 100%;
     height: 100%;
     transition: 1s;
@@ -123,7 +124,7 @@ export const ImageContainer = styled.div(({ theme, hover }) => css`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${hover ? 'transparent' : theme.accent + '55'};
+    background: ${hover ? 'transparent' : theme.accent + '22'};
     transition: 1s;
   }
 `);
