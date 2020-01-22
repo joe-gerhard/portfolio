@@ -39,33 +39,21 @@ export const Project = styled.div(({ theme }) => css`
       cursor: pointer;
     }
   }
-
-  img {
-    object-fit: cover;
-    height: 350px;
-    width: 1000px;
-    max-width: 50%;
-    filter: grayscale(1);
-    transition: .5s;
-
-    &:hover {
-      filter: grayscale(0);
-    }
-  }
 `);
 
-export const Description = styled.div(({ theme }) => css`
+export const Description = styled.div(({ theme, hover }) => css`
   position: absolute;
   display: flex;
   border-radius: 3px;
   line-height: 20px;
   top: 30%;
-  right: 0;
+  right: ${hover ? '20px' : '0'};
   width: 50%;
   z-index: 1;
   padding: 40px;
   background: ${theme.primary};
   color: ${theme.light};
+  transition: 1s;
 `);
 
 export const Text = styled.div`
@@ -107,5 +95,31 @@ export const Icons = styled.div(({ theme }) => css`
       color: ${theme.accent};
       bottom: 3px;
     }
+  }
+`);
+
+export const ImageContainer = styled.div(({ theme, hover }) => css`
+  position: relative;
+  max-width: 50%;
+  width: 1000px;
+  height: 350px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    filter: grayscale(${hover ? 0 : 1});
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+  }
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${hover ? 'transparent' : theme.accent + '55'};
+    transition: 1s;
   }
 `);

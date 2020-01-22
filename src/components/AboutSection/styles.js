@@ -1,18 +1,12 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
-export const StyledAboutSection = styled(Section)(({ theme, hover }) => css`
+export const StyledAboutSection = styled(Section)(({ theme }) => css`
 
   h1 { 
     width: 100%;
     padding-bottom: 5px;
     border-bottom: 1px solid ${theme.dark};
-  }
-
-  img {
-    filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};
-    transition: 2s;
-    object-fit: none;
   }
 `);
 
@@ -45,4 +39,24 @@ export const Card = styled.div(({ theme }) => css`
   align-items: flex-start;
   justify-content: flex-start;
   margin: 40px 0;
+`);
+
+export const ImageContainer = styled.div(({ theme, hover }) => css`
+  position: relative;
+
+  img {
+    filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};
+    transition: 2s;
+    object-fit: none;
+  }
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${hover ? 'transparent' : theme.accent + '55'};
+    transition: 2s;
+  }
 `);

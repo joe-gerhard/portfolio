@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyledAboutSection, Text, Card } from './styles';
+import { StyledAboutSection, Text, Card, ImageContainer } from './styles';
 
 const AboutSection = ({ aboutRef }) => {
 
@@ -8,7 +8,6 @@ const AboutSection = ({ aboutRef }) => {
   return (
     <StyledAboutSection 
       ref={aboutRef}
-      hover={hover}
     >
       
       <h1>About me</h1>
@@ -48,7 +47,10 @@ const AboutSection = ({ aboutRef }) => {
             </ul>
           </div>
         </Text>
-        <img src="/Small-Square.png" alt="Joe Gerhard" />
+        <ImageContainer hover={hover}>
+          <img src="/Small-Square.png" alt="Joe Gerhard" />
+          <div />
+        </ImageContainer>
       </Card>
     </StyledAboutSection>
   )
