@@ -10,7 +10,7 @@ export const StyledNav = styled.nav(({ theme, visible }) => css`
   justify-content: flex-end;
   align-items: center;
   background: ${theme.primary};
-  height: 50px;
+  height: 60px;
   width: 100%;
   transition: .5s;
 

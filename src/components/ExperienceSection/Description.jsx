@@ -11,7 +11,7 @@ const Description = ({ selected }) => {
       <h2>{job.location} | {job.dates}</h2>
       <ul>
         { job.description.map(bullet => 
-          <li key ={bullet}>{bullet}</li>
+          <li key={bullet}>{bullet}</li>
         ) }
       </ul>
     </StyledDescription>

@@ -117,9 +117,14 @@ export const StyledDescription = styled.div(({ theme }) => css`
   ul {
     list-style: '- ' outside;
     margin-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+
     @media (max-width: ${breakpoints.small}) {
       font-size: 14px;
+      line-height: 16px;
       margin: 0;
+
     }
   }
   li {
