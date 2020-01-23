@@ -12,7 +12,12 @@ export const StyledSocialBar = styled.div(({ theme }) => css`
   background: transparent;
 
   @media (max-width: ${breakpoints.medium}) {
-    display: none;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   a {
@@ -23,6 +28,10 @@ export const StyledSocialBar = styled.div(({ theme }) => css`
     margin: 5px 0;
     transition: .3s;
 
+    @media (max-width: ${breakpoints.medium}) {
+      margin: 20px 10px 0 10px;
+    }
+
     &:hover {
       color: ${theme.accent};
       bottom: 3px;
@@ -30,6 +39,10 @@ export const StyledSocialBar = styled.div(({ theme }) => css`
 
     &:last-child {
       margin-bottom: 60px;
+
+      @media (max-width: ${breakpoints.medium}) {
+        margin-bottom: 0;
+      }
     }
   }
 `);

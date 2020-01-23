@@ -7,7 +7,6 @@ import Footer from '../Footer';
 import { StyledApp, Sections } from './styles';
 import ExperienceSection from '../ExperienceSection/ExperienceSection';
 import ContactSection from '../ContactSection/ContactSection';
-import SocialBar from '../SocialBar';
 import { useState } from 'react';
 
 const App = () => {
@@ -48,7 +47,6 @@ const App = () => {
 
   return (
     <StyledApp>
-      <SocialBar />
       <Navbar executeScroll={executeScroll} {...refs} visible={visible}/>
       <Sections>
         <HomeSection {...refs} scrollY={scrollY}/>

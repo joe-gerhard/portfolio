@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyledNav } from './styles';
+import { StyledFooter } from './styles';
 
 const Footer = ({ executeScroll, homeRef, aboutRef, projectsRef }) => {
   return (
-    <StyledNav>
-      Designed and Built by Joe Gerhard
-    </StyledNav>
+    <StyledFooter>
+      <div>
+        Designed and Built by Joe Gerhard
+      </div>
+      <div>
+        <a href="mailto:JLGerhard@gmail.com">JLGerhard@gmail.com</a>
+      </div>
+    </StyledFooter>
 
   )
 }

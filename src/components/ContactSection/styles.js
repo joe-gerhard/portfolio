@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
+import { breakpoints } from '../../constants/breakpoints';
 
 export const StyledContactSection = styled(Section)(({ theme }) => css`
   width: 100%;
@@ -15,5 +16,9 @@ export const StyledContactSection = styled(Section)(({ theme }) => css`
     max-width: 500px;
     text-align: center;
     line-height: 24px; 
+
+    @media (max-width: ${breakpoints.medium})  {
+      margin-top: 10px;
+    }
   }
 `);

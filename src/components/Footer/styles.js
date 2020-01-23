@@ -1,11 +1,26 @@
 import styled, { css } from 'styled-components';
 
-export const StyledNav = styled.footer(({ theme }) => css`
+export const StyledFooter = styled.footer(({ theme }) => css`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
   align-items: center;
   background: ${theme.primary};
   color: ${theme.light};
-  height: 50px;
+  height: 80px;
   width: 100vw;
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: ${theme.light};
+    transition: .3s;
+    
+    &:hover {
+      color: ${theme.accent};
+    }
+  }
 `);
