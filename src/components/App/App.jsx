@@ -17,7 +17,7 @@ const App = () => {
   const handleScroll = () => {
     const DELTA = 5;
     const currentScrollY = window.scrollY;
-    const visible = scrollY > currentScrollY;
+    const isVisible = scrollY > currentScrollY || scrollY < 100;
 
     // if the user scrolls less than the value of DELTA, do nothing
     if(Math.abs(scrollY - currentScrollY) <= DELTA) {
@@ -25,7 +25,7 @@ const App = () => {
     }
     
     setScrollY(currentScrollY);
-    setVisible(visible);
+    setVisible(isVisible);
   }
 
   useEffect(() => {
