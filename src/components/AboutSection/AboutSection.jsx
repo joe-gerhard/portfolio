@@ -6,12 +6,15 @@ const AboutSection = ({ aboutRef, scrollY }) => {
   const [ hover, setHover ] = useState(false);
 
   useEffect(() => {
+
+    // if the aboutRef hasn't been defined yet, do nothing
     if(!aboutRef.current) return;
+
     const aboutTop = aboutRef.current.offsetTop;
     const aboutBottom = aboutTop + aboutRef.current.offsetHeight;
-    if((scrollY > (aboutTop - 400)
-      && scrollY < (aboutBottom - 200)
-    )) {
+
+    // if the scrollY position is within the about section, apply the hover condition
+    if((scrollY > (aboutTop - 400) && scrollY < (aboutBottom - 200))) {
       setHover(true)
     } else {
       setHover(false)

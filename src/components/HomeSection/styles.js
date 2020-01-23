@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
 
 export const StyledHomeSection = styled(Section)(({ theme }) => css`
-  
+  width: 100%;
 `);
 
 export const Card = styled.div(({ theme }) => css`
@@ -22,10 +22,11 @@ export const Card = styled.div(({ theme }) => css`
   }
 
   p {
+    display: flex;
     font-size: 16px;
     margin: 40px 0;
-    width: 50%;
     line-height: 24px;
+    max-width: 500px;
   }
 `);
 

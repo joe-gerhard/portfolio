@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
+import { breakpoints } from '../../constants/breakpoints'
 
 export const StyledAboutSection = styled(Section)(({ theme }) => css`
   width: 100%;
@@ -13,16 +14,27 @@ export const StyledAboutSection = styled(Section)(({ theme }) => css`
 
 export const Card = styled.div(({ theme }) => css`
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   margin: 40px 0;
   width: 100%;
+
+  @media (max-width: ${breakpoints.large}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `);
 
 export const Text =  styled.div(({ theme }) => css`
   display: flex;
   flex-direction: column;
   width: 60%;
+
+  @media (max-width: ${breakpoints.large}) {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 
   div {
     display: flex;
@@ -48,6 +60,10 @@ export const Text =  styled.div(({ theme }) => css`
 export const ImageContainer = styled.div(({ theme, hover }) => css`
   position: relative;
   width: 40%;
+
+  @media (max-width: ${breakpoints.large}) {
+    width: 70%;
+  }
 
   img {
     filter: ${hover ? 'grayscale(0)' : 'grayscale(1)'};

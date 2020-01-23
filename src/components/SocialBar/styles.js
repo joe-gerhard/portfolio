@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { breakpoints } from '../../constants/breakpoints';
 
 export const StyledSocialBar = styled.div(({ theme }) => css`
   position: fixed;
@@ -9,6 +10,10 @@ export const StyledSocialBar = styled.div(({ theme }) => css`
   align-items: center;
   width: 40px; 
   background: transparent;
+
+  @media (max-width: ${breakpoints.medium}) {
+    display: none;
+  }
 
   a {
     position: relative;
