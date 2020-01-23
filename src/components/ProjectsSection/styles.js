@@ -16,7 +16,7 @@ export const StyledProjectsSection = styled(Section)(({ theme }) => css`
   }
 `);
 
-export const Project = styled.div(({ theme }) => css`
+export const StyledProject = styled.div(({ theme }) => css`
   position: relative;
   display: flex;
   flex-direction: row;

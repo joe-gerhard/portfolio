@@ -17,19 +17,19 @@ const AboutSection = ({ aboutRef }) => {
         <Text>
           <p>
           I come from a career in the event production industry, so I'm no stranger to bizarre 
-          and ever-changing problems to tackle. I write clean code, have an eye for design, value quality relationships, and 
-          there's nothing I love more than the feeling of a hard job well done. At every position 
-          I've ever held, I've always been the "fastest-anyone's-ever-caught-on-to-this" kind 
+          and ever-changing problems. I write clean code, have an eye for design, value quality relationships, and 
+          absolutely cherish the feeling of a difficult job well done. At every position 
+          I've ever held, I've been known as the "fastest-anyone's-ever-caught-on-to-this" kind 
           of person, and I take great pride in continuing that legacy. 
           </p>
           <p>
-          Last year I graduated at the top of my class from a software engineering boot camp, and
-          have since continued to teach myself many new technologies. I'm an extremely fast learner,
-          highly motivated, and have always been a high achiever--I was a full-ride academic scholar
-          at my university, for example. 
+          After graduating at the top of the class from General Assembly's Software Engineering Immersive program, I've
+          continued to work on various projects while also teaching myself many new skills and technologies. I'm an extremely fast learner,
+          highly motivated, and have always been a high achiever--I recieved a full-ride academic scholarship
+          from Arizona State, for example. 
           </p>
           
-          <span>Some of my favorite technologies to work with are:</span>
+          <span>Some of my current favorite technologies to work with are:</span>
           
           <div>
             <ul>

@@ -12,20 +12,20 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [ prevScrollY, setPrevScrollY ] = useState(0);
+  const [ scrollY, setScrollY ] = useState(0);
   const [ visible, setVisible ] = useState(true);
 
   const handleScroll = () => {
     const DELTA = 5;
     const currentScrollY = window.scrollY;
-    const visible = prevScrollY > currentScrollY;
+    const visible = scrollY > currentScrollY;
 
     // if the user scrolls less than the value of DELTA, do nothing
-    if(Math.abs(prevScrollY - currentScrollY) <= DELTA) {
+    if(Math.abs(scrollY - currentScrollY) <= DELTA) {
       return 
     }
     
-    setPrevScrollY(currentScrollY);
+    setScrollY(currentScrollY);
     setVisible(visible);
   }
 
@@ -51,11 +51,11 @@ const App = () => {
       <SocialBar />
       <Navbar executeScroll={executeScroll} {...refs} visible={visible}/>
       <Sections>
-        <HomeSection {...refs} />
-        <AboutSection {...refs}/>
-        <ExperienceSection {...refs}/>
-        <ProjectsSection {...refs}/>
-        <ContactSection {...refs}/>
+        <HomeSection {...refs} scrollY={scrollY}/>
+        <AboutSection {...refs} scrollY={scrollY}/>
+        <ExperienceSection {...refs} scrollY={scrollY}/>
+        <ProjectsSection {...refs} scrollY={scrollY}/>
+        <ContactSection {...refs} scrollY={scrollY}/>
       </Sections>
       <Footer executeScroll={executeScroll} {...refs}/>
     </StyledApp>
