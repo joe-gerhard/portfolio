@@ -7,7 +7,7 @@ export const StyledApp = styled.div`
 `;
 
 export const Sections = styled.div`
-  width: 80vw;
+  width: 85vw;
   max-width: 1000px;
   display: flex;
   flex-direction: column;

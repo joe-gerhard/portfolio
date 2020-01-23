@@ -193,11 +193,11 @@ export const ImageContainer = styled.div(({ theme, hover }) => css`
     opacity: ${hover ? 1 : .1};
     width: 100%;
     height: 100%;
-    transition: 1s;
+    transition: 2s;
 
     @media (max-width: ${breakpoints.medium}) {
       filter: grayscale(1);
-      opacity: .1;
+      opacity: ${hover ? .1 : 0};
     }
   }
 
