@@ -1,4 +1,5 @@
 import { css, createGlobalStyle } from 'styled-components'
+import { breakpoints } from '../constants/breakpoints';
 
 export const reset = css`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -62,6 +63,11 @@ table {
 
 h1 {
   font-size: 36px;
+  font-weight: 900;
+
+  @media (max-width: ${breakpoints.small}) {
+    font-size: 28px;
+  }
 }
 `
 

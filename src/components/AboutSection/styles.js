@@ -38,22 +38,42 @@ export const Text =  styled.div(({ theme }) => css`
 
   div {
     display: flex;
+
+    @media (max-width: ${breakpoints.small}) {
+      justify-content: space-around;
+    }
   }
 
   p {
     padding-right: 40px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    @media (max-width: ${breakpoints.small}) {
+      padding: 0;
+      text-align: justify;
+    }
   }
 
   span {
     margin-bottom: 10px;
+    line-height: 24px;
+
+    @media (max-width: ${breakpoints.small}) {
+      text-align: justify;
+    }
   }
 
   ul {
     margin: 0 30px;
     line-height: 24px;
     list-style: inside;
+    font-size: 14px;
+    list-style-type: '- ';
+
+    @media (max-width: ${breakpoints.small}) {
+      margin: 0;
+    }
   }
 `);
 
@@ -63,6 +83,10 @@ export const ImageContainer = styled.div(({ theme, hover }) => css`
 
   @media (max-width: ${breakpoints.large}) {
     width: 70%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 
   img {

@@ -60,7 +60,7 @@ export const ExpButton = styled.button(({ theme, selected }) => css`
   color: ${selected ? theme.dark : theme.light};
   font-size: 16px;
   border: none;
-  border-left: 2px solid ${selected ? theme.accent : theme.dark};
+  border-left: 2px solid ${selected ? theme.accent : theme.light};
   border-radius: none;
   transition: .5s;
   text-align: left;
@@ -76,7 +76,7 @@ export const ExpButton = styled.button(({ theme, selected }) => css`
     padding-left: 0;
     min-width: 180px;
     border-left: none;
-    border-bottom: 2px solid ${selected ? theme.accent : theme.dark};
+    border-bottom: 2px solid ${selected ? theme.accent : theme.light};
 
     &:first-child {
       margin-left: 10vw;
@@ -89,20 +89,38 @@ export const StyledDescription = styled.div(({ theme }) => css`
   padding: 0 20px;
   color: ${theme.dark};
 
+  @media (max-width: ${breakpoints.medium}) {
+    padding: 0;
+    margin-top: 10px;
+  }
+
   h1 {
     font-size: 24px;
     margin: 10px 0;
     border: none;
+
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 18px;
+      font-weight: 900;
+    }
   }
 
   h2 {
     font-size: 18px;
     margin: 10px 0;
+
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 16px;
+    }
   }
 
   ul {
-    list-style: disc outside;
+    list-style: '- ' outside;
     margin-left: 20px;
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 14px;
+      margin: 0;
+    }
   }
   li {
     margin: 10px 0;

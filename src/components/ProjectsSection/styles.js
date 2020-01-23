@@ -36,6 +36,11 @@ export const StyledProject = styled.div(({ theme }) => css`
       text-align: right;
       padding-right: 40px;
     }
+    
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 14px;
+      padding-right: 20px;
+    }
   }
 
 
@@ -49,6 +54,11 @@ export const StyledProject = styled.div(({ theme }) => css`
     @media (max-width: ${breakpoints.medium}) {
       text-align: right;
       padding-right: 40px;
+    }
+
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 20px;
+      padding-right: 20px;
     }
   }
 
@@ -86,6 +96,13 @@ export const Description = styled.div(({ theme, hover }) => css`
     width: 85%;
     text-align: right;
     font-size: 18px;
+    top: 20%;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    font-size: 14px;
+    padding-right: 20px;
+    top: 25%;
   }
 `);
 
@@ -111,7 +128,10 @@ export const Technologies = styled.div`
   @media (max-width: ${breakpoints.medium}) {
     justify-content: flex-end;
     padding-right: 40px;
+  }
 
+  @media (max-width: ${breakpoints.small}) {
+    padding-right: 20px;
   }
 `;
 
@@ -125,6 +145,10 @@ export const Icons = styled.div(({ theme }) => css`
   @media (max-width: ${breakpoints.medium}) {
     justify-content: flex-end;
     padding-right: 40px;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    padding-right: 20px;
   }
 
   a {

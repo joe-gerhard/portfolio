@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
+import { breakpoints } from '../../constants/breakpoints';
 
 export const StyledHomeSection = styled(Section)(({ theme }) => css`
   width: 100%;
@@ -14,11 +15,35 @@ export const Card = styled.div(({ theme }) => css`
   h1 {
     font-size: 80px;
     margin: 10px 0;
+
+    @media (max-width: 600px) {
+      font-size: 65px;
+      margin: 0;
+    }
+
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 55px;
+    }
+    
+    @media (max-width: 400px) {
+      font-size: 45px;
+    }
+    @media (max-width: 330px) {
+      font-size: 40px;
+    }
   }
 
   h3 {
     font-size: 24px;
     color: ${theme.accent};
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+    
+    @media (max-width: 330px) {
+      font-size: 16px;
+    }
   }
 
   p {
