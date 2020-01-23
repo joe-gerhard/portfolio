@@ -52,6 +52,7 @@ export const Card = styled.div(({ theme }) => css`
     margin: 40px 0;
     line-height: 24px;
     max-width: 500px;
+    text-align: justify;
   }
 `);
 
