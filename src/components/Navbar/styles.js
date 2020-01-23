@@ -21,6 +21,7 @@ export const StyledNav = styled.nav(({ theme, visible, isOpen }) => css`
 
 export const StyledLink = styled.span(({ theme, menu }) => css`
   margin: 0 10px;
+  margin-bottom: ${menu ? '40px' : 0};
   color: ${theme.light};
   transition: .5s;
 
@@ -29,6 +30,10 @@ export const StyledLink = styled.span(({ theme, menu }) => css`
     color: ${theme.accent};
   }
 
+  &:first-child {
+    margin-top: ${menu ? '40px' : 0};
+  }
+  
   &:last-child {
     margin-right: 20px;
   }
@@ -53,7 +58,7 @@ export const Menu = styled.div(({ theme, isOpen }) => css`
   display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: calc(100vh - 60px);
   width: 50vw;
   background: ${theme.primaryVariant};
