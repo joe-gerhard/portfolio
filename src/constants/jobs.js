@@ -47,7 +47,7 @@ export const JOBS = [
   `Worked with state-of-the-art intelligent lighting fixtures to bring our designer’s visions to life to delight our clients.`]
   },
   { 
-    name: "Foxy Shazam / ESTK",
+    name: "Foxy Shazam",
     location: "In a tour van somewhere around the country",
     dates: "2007-2010",
     title: "Tour Manager", 

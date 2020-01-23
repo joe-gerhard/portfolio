@@ -32,7 +32,7 @@ export const Text =  styled.div(({ theme }) => css`
   width: 60%;
 
   @media (max-width: ${breakpoints.large}) {
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
