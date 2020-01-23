@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 import { breakpoints } from '../../constants/breakpoints'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const StyledNav = styled.nav(({ theme, visible }) => css`
+export const StyledNav = styled.nav(({ theme, visible, isOpen }) => css`
   position: fixed;
-  top: ${visible ? '0' : '-60px'};
+  top: ${(visible || isOpen) ? '0' : '-60px'};
   z-index: 100;
   display: flex;
   justify-content: flex-end;
@@ -17,15 +17,9 @@ export const StyledNav = styled.nav(({ theme, visible }) => css`
   &:hover {
     cursor: default;
   }
-
-  button {
-    @media (max-width: ${breakpoints.medium}) {
-      display: none;
-    }
-  }
 `);
 
-export const StyledLink = styled.span(({ theme }) => css`
+export const StyledLink = styled.span(({ theme, menu }) => css`
   margin: 0 10px;
   color: ${theme.light};
   transition: .5s;
@@ -40,7 +34,7 @@ export const StyledLink = styled.span(({ theme }) => css`
   }
 
   @media (max-width: ${breakpoints.medium}) {
-    display: none;
+    display: ${menu ? 'block' : 'none'};
   }
 `);
 
@@ -52,6 +46,29 @@ export const Icon = styled(FontAwesomeIcon)(({ theme }) => css`
 
   @media (max-width: ${breakpoints.medium}) {
     display: block;
+  }
+`);
+
+export const Menu = styled.div(({ theme, isOpen }) => css`
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100vh - 60px);
+  width: 50vw;
+  background: ${theme.primaryVariant};
+  transition: .3s;
+
+  @media (max-width: ${breakpoints.medium}) {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    right: ${isOpen ? 0 : '-50vw'};
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    width: 80vw;
+    right: ${isOpen ? 0 : '-80vw'};
   }
 `);
 

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { breakpoints } from '../../constants/breakpoints';
 
-export const StyledButton = styled.button(({ theme, margin }) => css`
+export const StyledButton = styled.button(({ theme, margin, hide }) => css`
   padding: 10px 20px;
   margin: 0 ${margin || 0};
   border: 1px solid ${theme.accent};
@@ -14,4 +15,8 @@ export const StyledButton = styled.button(({ theme, margin }) => css`
     background: ${theme.accent + '55'};
     cursor: pointer;
   }
+
+  @media (max-width: ${breakpoints.medium}) {
+      display: ${hide ? 'none' : 'block'};
+    }
 `);
