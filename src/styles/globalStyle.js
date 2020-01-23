@@ -45,11 +45,12 @@ footer, header, hgroup, main, menu, nav, section {
 }
 
 html {
-  background-color: ${theme.primary};
+  background: ${theme.primary};
 }
 body {
   line-height: 1;
-  background-color: white;
+  background: white;
+  z-index: -5;
 }
 ol, ul {
   list-style: none;
