@@ -13,11 +13,12 @@ const Project = ({ project, scrollY }) => {
 
   useEffect(() => {
     if(!projectRef.current) return;
+
     const projectTop = projectRef.current.offsetTop;
     const projectBottom = projectTop + projectRef.current.offsetHeight;
-    if((scrollY > (projectTop - 400)
-      && scrollY < (projectBottom - 200)
-    )) {
+
+    // if the scrollY position fallse within the project, set the hover condition to true
+    if((scrollY > (projectTop - 400) && scrollY < (projectBottom - 200))) {
       setHover(true)
     } else {
       setHover(false)
@@ -35,6 +36,7 @@ const Project = ({ project, scrollY }) => {
       <div />
     </ImageContainer>
     <Text>
+      <h3>Featured Project</h3>
       <h2><a href={project.link} target="_blank" rel="noopener noreferrer">{project.name}</a></h2>
       <Description hover={hover}>
         {project.description}

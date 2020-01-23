@@ -4,7 +4,7 @@ export const PROJECTS = [
     github: 'https://github.com/joe-gerhard/mtg-filter-mern',
     link: 'https://mtg-pick-order.herokuapp.com/',
     image: '/mtg-pick-order.png',
-    technologies: ['React', 'Redux', 'Express', 'Node', 'MongoDB', 'styled-components'],
+    technologies: ['React', 'Redux', 'Express', 'Node', 'MongoDB'],
     description: `An application for editing and filtering cards based on user 
     created pick-orders. For use in the Limited Booster draft format.`
   },
@@ -13,7 +13,7 @@ export const PROJECTS = [
     github: 'https://github.com/baeddavid/G2G',
     link: 'https://g2g-gottago.herokuapp.com/welcome',
     image: '/G2G.png',
-    technologies: ['React', 'GraphQL', 'Prisma', 'MongoDB', 'Apollo'],
+    technologies: ['React', 'GraphQL', 'MongoDB', 'Apollo'],
     description: `A progressive JAM stack web application for finding and filtering 
     nearby bathrooms with accessibility concerns in mind.`
   },

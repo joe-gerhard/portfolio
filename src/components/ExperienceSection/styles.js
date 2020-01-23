@@ -1,7 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Section } from '../../styles';
+import { breakpoints } from '../../constants/breakpoints';
 
 export const StyledExperienceSection = styled(Section)(({ theme }) => css`
+  width: 100%;
+
   p {
     padding: 40px;
     line-height: 24px;
@@ -10,6 +13,10 @@ export const StyledExperienceSection = styled(Section)(({ theme }) => css`
   h1 {
     width: 70%;
     border-bottom: 1px solid ${theme.dark};
+
+    @media (max-width: ${breakpoints.large}) {
+      width: 100%;
+    }
   }
 `);
 
@@ -17,6 +24,10 @@ export const ExperienceWrapper = styled.div(({ theme }) => css`
   display: flex;
   width: 70%;
   margin-top: 40px;
+
+  @media (max-width: ${breakpoints.large}) {
+    width: 100%;
+  }
 `);
 
 export const Buttons = styled.div(({ theme }) => css`
