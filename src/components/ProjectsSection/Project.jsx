@@ -10,7 +10,6 @@ const Project = ({ project, scrollY }) => {
 
   const [ hover, setHover ] = useState(false);
   const projectRef = useRef();
-  console.log(projectRef.current && projectRef.current.offsetTop)
 
   useEffect(() => {
     if(!projectRef.current) return;

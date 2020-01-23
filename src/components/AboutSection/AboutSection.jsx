@@ -1,9 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyledAboutSection, Text, Card, ImageContainer } from './styles';
 
-const AboutSection = ({ aboutRef }) => {
+const AboutSection = ({ aboutRef, scrollY }) => {
 
   const [ hover, setHover ] = useState(false);
+
+  useEffect(() => {
+    if(!aboutRef.current) return;
+    const aboutTop = aboutRef.current.offsetTop;
+    const aboutBottom = aboutTop + aboutRef.current.offsetHeight;
+    if((scrollY > (aboutTop - 400)
+      && scrollY < (aboutBottom - 200)
+    )) {
+      setHover(true)
+    } else {
+      setHover(false)
+    }
+  }, [scrollY, aboutRef]);
 
   return (
     <StyledAboutSection 
