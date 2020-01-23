@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StyledNav = styled.nav(({ theme, visible }) => css`
   position: fixed;
-  top: ${visible ? '0' : '-50px'};
+  top: ${visible ? '0' : '-60px'};
   z-index: 100;
   display: flex;
   justify-content: flex-end;

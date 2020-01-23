@@ -1,5 +1,6 @@
 import { css, createGlobalStyle } from 'styled-components'
 import { breakpoints } from '../constants/breakpoints';
+import theme from './theme';
 
 export const reset = css`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -42,8 +43,13 @@ footer, header, hgroup, main, menu, nav, section {
 *[hidden] {
     display: none;
 }
+
+html {
+  background-color: ${theme.primary};
+}
 body {
   line-height: 1;
+  background-color: white;
 }
 ol, ul {
   list-style: none;
