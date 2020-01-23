@@ -40,7 +40,7 @@ export const Buttons = styled.div(({ theme }) => css`
 
   @media (max-width: ${breakpoints.medium}) {
     position: relative;
-    left: -10vw;
+    left: -7.5vw;
     width: 100vw;
     overflow-x: scroll;
     flex-direction: row;
@@ -79,7 +79,7 @@ export const ExpButton = styled.button(({ theme, selected }) => css`
     border-bottom: 2px solid ${selected ? theme.accent : theme.light};
 
     &:first-child {
-      margin-left: 10vw;
+      margin-left: 7.5vw;
     }
   }
 `);

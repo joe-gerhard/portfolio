@@ -47,6 +47,7 @@ footer, header, hgroup, main, menu, nav, section {
 html {
   background: ${theme.primary};
 }
+
 body {
   line-height: 1;
   background: white;
