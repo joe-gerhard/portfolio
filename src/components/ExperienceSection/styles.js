@@ -122,5 +122,6 @@ export const StyledDescription = styled.div(({ theme }) => css`
   }
   li {
     margin: 10px 0;
+    text-align: justify;
   }
 `);

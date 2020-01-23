@@ -48,10 +48,10 @@ export const Text =  styled.div(({ theme }) => css`
     padding-right: 40px;
     line-height: 24px;
     margin-bottom: 20px;
+    text-align: justify;
 
     @media (max-width: ${breakpoints.medium}) {
       padding: 0;
-      text-align: justify;
     }
   }
 
