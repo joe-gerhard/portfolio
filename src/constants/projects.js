@@ -8,15 +8,15 @@ export const PROJECTS = [
     description: `An application for editing and filtering cards based on user 
     created pick-orders. For use in the Limited Booster draft format.`
   },
-  {
-    name: 'G2G (Got to Go)',
-    github: 'https://github.com/baeddavid/G2G',
-    link: 'https://g2g-gottago.herokuapp.com/welcome',
-    image: '/G2G.png',
-    technologies: ['React', 'GraphQL', 'MongoDB', 'Apollo'],
-    description: `A progressive JAM stack web application for finding and filtering 
-    nearby bathrooms with accessibility concerns in mind.`
-  },
+  // {
+  //   name: 'G2G (Got to Go)',
+  //   github: 'https://github.com/baeddavid/G2G',
+  //   link: 'https://g2g-gottago.herokuapp.com/welcome',
+  //   image: '/G2G.png',
+  //   technologies: ['React', 'GraphQL', 'MongoDB', 'Apollo'],
+  //   description: `A progressive JAM stack web application for finding and filtering 
+  //   nearby bathrooms with accessibility concerns in mind.`
+  // },
   {
     name: 'Django Unlibbed',
     github: 'https://github.com/joe-gerhard/django-unlibbed',
