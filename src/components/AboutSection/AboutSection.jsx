@@ -41,7 +41,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
           <p>
           After graduating at the top of the class from General Assembly's Software Engineering Immersive program, I've
           continued to work on various projects while also teaching myself many new skills and technologies. I'm an extremely fast learner,
-          highly motivated, and have always been a high achiever--I recieved a full-ride academic scholarship
+          highly motivated, and have always been a high achiever--I received a full-ride academic scholarship
           from Arizona State, for example. 
           </p>
           
