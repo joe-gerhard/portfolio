@@ -1,5 +1,13 @@
 export const PROJECTS = [
   {
+    name: 'Pixel Art',
+    github: 'https://github.com/joe-gerhard/pixel-art-app',
+    link: 'https://joxel-art.netlify.com/',
+    image: '/pixel-art.png',
+    technologies: ['React', 'Redux', 'TypeScript', 'styled-components'],
+    description: `A web application for creating pixel art`
+  },
+  {
     name: 'Magic: The Gathering - Pick Order Filter',
     github: 'https://github.com/joe-gerhard/mtg-filter-mern',
     link: 'https://mtg-pick-order.herokuapp.com/',

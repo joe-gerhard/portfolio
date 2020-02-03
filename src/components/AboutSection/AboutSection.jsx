@@ -55,7 +55,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
               <li>Express</li>
             </ul>
             <ul>
-              <li>HTML/CSS</li>
+              <li>TypeScript</li>
               <li>Node.js</li>
               <li>styled-components</li>
               <li>MongoDB</li>
