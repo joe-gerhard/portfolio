@@ -5,7 +5,7 @@ export const PROJECTS = [
     link: 'https://joxel-art.netlify.com/',
     image: '/pixel-art.png',
     technologies: ['React', 'Redux', 'TypeScript', 'styled-components'],
-    description: `A web application for creating pixel art`
+    description: `A web application for creating pixel art made with React and TypeScript`
   },
   {
     name: 'Magic: The Gathering - Pick Order Filter',
