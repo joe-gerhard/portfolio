@@ -1,5 +1,13 @@
 export const PROJECTS = [
   {
+    name: 'Minesweeper',
+    github: 'https://github.com/joe-gerhard/minesweeper',
+    link: 'https://joesweeper.netlify.com',
+    image: '/minesweeper.png',
+    technologies: ['React', 'TypeScript', 'styled-components'],
+    description: `A React web app reproduction of the classic windows game, Minesweeper.`
+  },
+  {
     name: 'Pixel Art',
     github: 'https://github.com/joe-gerhard/pixel-art-app',
     link: 'https://joxel-art.netlify.com/',
