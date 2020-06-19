@@ -4,7 +4,7 @@ export const PROJECTS = [
     github: 'https://github.com/joe-gerhard/minesweeper',
     link: 'https://joesweeper.netlify.com',
     image: '/minesweeper.png',
-    technologies: ['React', 'TypeScript', 'styled-components'],
+    technologies: ['React', 'Redux', 'TypeScript', 'styled-components'],
     description: `A React web app reproduction of the classic windows game, Minesweeper.`
   },
   {
