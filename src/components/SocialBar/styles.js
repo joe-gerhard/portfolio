@@ -29,6 +29,22 @@ export const StyledSocialBar = styled.div(
             margin: 5px 0;
             transition: 0.3s;
 
+            &::after {
+                content: "";
+                background-color: black;
+                border-radius: 50%;
+                height: 0.2em;
+                width: 1.5em;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                translate: -50% 0;
+                opacity: 0;
+                z-index: -1;
+                transition: 0.3s;
+                box-shadow: 0 0 3px 1px black;
+            }
+
             @media (max-width: ${breakpoints.medium}) {
                 margin: 20px 10px 0 10px;
             }
@@ -36,6 +52,12 @@ export const StyledSocialBar = styled.div(
             &:hover {
                 color: ${theme.accent};
                 bottom: 3px;
+            }
+
+            &:hover::after {
+                opacity: 0.15;
+                bottom: -3px;
+                width: 0.7em;
             }
 
             &:last-child {
