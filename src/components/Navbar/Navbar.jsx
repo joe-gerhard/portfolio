@@ -36,7 +36,7 @@ const Navbar = ({
             <StyledLink onClick={() => executeScroll(contactRef)}>
                 Contact
             </StyledLink>
-            <Button hide onClick={handleOpenResume} margin={"20px"}>
+            <Button dark hide onClick={handleOpenResume} margin={"20px"}>
                 Resumé
             </Button>
             <Icon icon={faBars} onClick={handleToggleMenu} />
@@ -53,7 +53,7 @@ const Navbar = ({
                 <StyledLink menu onClick={() => executeScroll(contactRef)}>
                     Contact
                 </StyledLink>
-                <Button menu onClick={handleOpenResume} margin={"20px"}>
+                <Button dark menu onClick={handleOpenResume} margin={"20px"}>
                     Resumé
                 </Button>
             </Menu>
