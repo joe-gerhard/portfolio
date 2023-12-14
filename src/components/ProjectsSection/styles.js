@@ -163,10 +163,33 @@ export const Icons = styled.div(
             color: ${theme.dark};
             margin-left: 10px;
             transition: 0.3s;
+            z-index: 1;
 
             &:hover {
                 color: ${theme.accent};
                 bottom: 3px;
+            }
+
+            &::after {
+                content: "";
+                background-color: black;
+                border-radius: 50%;
+                height: 0.2em;
+                width: 1.5em;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                translate: -50% 0;
+                opacity: 0;
+                z-index: 0;
+                transition: 0.3s;
+                box-shadow: 0 0 3px 1px black;
+            }
+
+            &:hover::after {
+                opacity: 0.3;
+                bottom: -3px;
+                width: 0.7em;
             }
         }
     `,
