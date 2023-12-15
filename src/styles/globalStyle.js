@@ -131,6 +131,7 @@ export const reset = css`
         line-height: 1;
         background: white;
         z-index: -5;
+        user-select: none;
     }
     ol,
     ul {
