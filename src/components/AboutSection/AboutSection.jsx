@@ -28,45 +28,37 @@ const AboutSection = ({ aboutRef, scrollY }) => {
             >
                 <Text>
                     <p>
-                        I come from a career in the event production industry,
-                        so I'm no stranger to bizarre and ever-changing
-                        problems. I write clean code, have an eye for design,
-                        value quality relationships, and absolutely cherish the
-                        feeling of a difficult job well done. At every position
-                        I've ever held, I've been known as the
-                        "fastest-anyone's-ever-caught-on-to-this" kind of
-                        person, and I take great pride in continuing that
-                        legacy.
+                        Rooted in the dynamic world of event production, I've
+                        cultivated skills in problem-solving, clean code, and
+                        design aesthetics. Valuing meaningful connections and
+                        relishing the thrill of overcoming challenges, I offer a
+                        unique perspective to the software engineering
+                        landscape.
                     </p>
+
                     <p>
-                        After graduating at the top of the class from General
+                        Graduating at the top of my class from General
                         Assembly's Software Engineering Immersive program, I've
-                        continued to work on various projects while also
-                        teaching myself many new skills and technologies. I'm an
-                        extremely fast learner, highly motivated, and have
-                        always been a high achiever--I received a full-ride
-                        academic scholarship from Arizona State, for example.
+                        earned a reputation for quick adaptability and a keen
+                        ability to swiftly grasp new concepts. This talent for
+                        efficiently navigating complex tasks has consistently
+                        characterized my career, showcasing a commitment to
+                        staying agile in an ever-evolving field.
                     </p>
 
-                    <span>
-                        Some of my current favorite technologies to work with
-                        are:
-                    </span>
+                    <p>
+                        My professional journey includes a pivotal role at
+                        ArgonDigital as a Technical Specialist III, where I
+                        contributed to developing dynamic websites and
+                        successfully revitalized a challenging M-Files project.
+                    </p>
 
-                    <div>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Redux</li>
-                            <li>Express</li>
-                        </ul>
-                        <ul>
-                            <li>TypeScript</li>
-                            <li>Node.js</li>
-                            <li>styled-components</li>
-                            <li>MongoDB</li>
-                        </ul>
-                    </div>
+                    <p>
+                        A recipient of a full-ride academic scholarship from
+                        Arizona State University, my drive for continuous
+                        improvement fuels my enthusiasm for contributing diverse
+                        backgrounds and technical skills to innovative projects.
+                    </p>
                 </Text>
                 <ImageContainer hover={hover}>
                     <img src="/Small-Square.png" alt="Joe Gerhard" />
