@@ -15,8 +15,7 @@ const ContactSection = ({ contactRef }) => {
             <SocialBar />
             <p>
                 I am actively seeking new work opportinities, so please feel
-                free to contact reach out any time. Looking forward to hearing
-                from you!
+                free to reach out any time. Looking forward to hearing from you!
             </p>
             <Button dark onClick={handleEmailMe}>
                 Email
