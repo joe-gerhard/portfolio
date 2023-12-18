@@ -6,8 +6,16 @@ export const PROJECTS = [
         github: "https://github.com/joe-gerhard/joesbook",
         link: "https://joesbook.herokuapp.com/",
         image: joesbook,
-        technologies: ["React", "Redux", "TypeScript", "styled-components"],
-        description: `A simple social media application`,
+        technologies: [
+            "MongoDB",
+            "Express",
+            "React",
+            "NodeJs",
+            "Redux",
+            "TypeScript",
+            "OAuth2",
+        ],
+        description: `A MERN stack social media application demonstrating proficiency with OAuth2 via Passport as well as managing user generated data in a MongoDB NoSQL database using Mongoose ORM.`,
     },
     {
         name: "Minesweeper",
