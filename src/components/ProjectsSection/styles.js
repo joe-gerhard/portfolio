@@ -6,12 +6,6 @@ export const StyledProjectsSection = styled(Section)(
     ({ theme }) => css`
         width: 100%;
 
-        & > h2 {
-            width: 100%;
-            padding-bottom: 5px;
-            border-bottom: 1px solid ${theme.dark};
-        }
-
         p {
             padding: 40px;
             line-height: 24px;
@@ -86,9 +80,9 @@ export const Description = styled.div(
         line-height: 20px;
         top: 30%;
         right: ${hover ? "20px" : "0"};
-        width: 50%;
+        width: 60%;
         z-index: 1;
-        padding: 40px;
+        padding: 5rem 2rem;
         background: ${theme.primary};
         color: ${theme.light};
         transition: 1s;

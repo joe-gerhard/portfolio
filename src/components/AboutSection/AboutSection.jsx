@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
+import { H2 } from "../../styles";
 
 const AboutSection = ({ aboutRef, scrollY }) => {
     const [hover, setHover] = useState(false);
@@ -21,7 +22,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
 
     return (
         <StyledAboutSection ref={aboutRef}>
-            <h2>About me</h2>
+            <H2>About me</H2>
             <Card
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}

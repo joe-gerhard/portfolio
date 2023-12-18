@@ -2,6 +2,7 @@ import React from "react";
 import { StyledContactSection } from "./styles";
 import Button from "../Button";
 import SocialBar from "../SocialBar";
+import { H2 } from "../../styles";
 
 const ContactSection = ({ contactRef }) => {
     const handleEmailMe = () => {
@@ -10,14 +11,16 @@ const ContactSection = ({ contactRef }) => {
 
     return (
         <StyledContactSection ref={contactRef}>
-            <h2>Contact</h2>
+            <H2 textAlign="center">Contact</H2>
             <SocialBar />
             <p>
                 I am actively seeking new work opportinities, so please feel
                 free to contact me any time. Looking forward to hearing from
                 you!
             </p>
-            <Button dark onClick={handleEmailMe}>Email</Button>
+            <Button dark onClick={handleEmailMe}>
+                Email
+            </Button>
         </StyledContactSection>
     );
 };

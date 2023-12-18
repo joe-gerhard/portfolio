@@ -16,3 +16,12 @@ export const Section = styled.section(
         }
     `,
 );
+
+export const H2 = styled.h2(
+    ({ theme, textAlign }) => css`
+        text-align: ${textAlign ? textAlign : "left"};
+        width: 100%;
+        border-bottom: 1px solid ${theme.dark};
+        margin-bottom: 1.5rem;
+    `,
+);

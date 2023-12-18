@@ -7,6 +7,9 @@ export const reset = css`
    v4.0 | 20180602
    License: none (public domain)
 */
+    * {
+        box-sizing: border-box;
+    }
 
     *:focus {
         outline: none;

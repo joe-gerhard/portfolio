@@ -7,13 +7,14 @@ import {
 } from "./styles";
 import Description from "./Description";
 import { JOBS } from "../../constants/jobs";
+import { H2 } from "../../styles";
 
 const ExperienceSection = ({ experienceRef }) => {
     const [selected, setSelected] = useState(0);
 
     return (
         <StyledExperienceSection ref={experienceRef}>
-            <h2>Experience</h2>
+            <H2>Experience</H2>
             <ExperienceWrapper>
                 <Buttons>
                     {JOBS.map((job, idx) => (

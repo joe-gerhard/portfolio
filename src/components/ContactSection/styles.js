@@ -6,16 +6,9 @@ export const StyledContactSection = styled(Section)(
     ({ theme }) => css`
         width: 100%;
 
-        h2 {
-            border-bottom: 1px solid ${theme.dark};
-            width: 100%;
-            text-align: center;
-        }
-
         p {
-            margin: 40px 0;
+            margin-bottom: 1.5rem;
             max-width: 500px;
-            text-align: center;
             line-height: 24px;
 
             @media (max-width: ${breakpoints.medium}) {

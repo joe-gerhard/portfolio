@@ -10,22 +10,13 @@ export const StyledExperienceSection = styled(Section)(
             padding: 40px;
             line-height: 24px;
         }
-
-        h2 {
-            width: 70%;
-            border-bottom: 1px solid ${theme.dark};
-
-            @media (max-width: ${breakpoints.large}) {
-                width: 100%;
-            }
-        }
     `,
 );
 
 export const ExperienceWrapper = styled.div(
     ({ theme }) => css`
         display: flex;
-        width: 70%;
+        width: 100%;
         margin-top: 40px;
 
         @media (max-width: ${breakpoints.large}) {
