@@ -14,6 +14,7 @@ export const Card = styled.div(
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
+        gap: 3rem;
         width: 100%;
 
         @media (max-width: ${breakpoints.large}) {
@@ -24,7 +25,7 @@ export const Card = styled.div(
 );
 
 export const Text = styled.div(
-    ({ theme }) => css`
+    ({ theme, active }) => css`
         display: flex;
         flex-direction: column;
         width: 60%;
@@ -43,35 +44,13 @@ export const Text = styled.div(
         }
 
         p {
-            padding-right: 40px;
+            position: relative;
             line-height: 24px;
             margin-bottom: 20px;
             text-align: left;
-
-            @media (max-width: ${breakpoints.medium}) {
-                padding: 0;
-            }
-        }
-
-        span {
-            margin-bottom: 10px;
-            line-height: 24px;
-
-            @media (max-width: ${breakpoints.small}) {
-                text-align: left;
-            }
-        }
-
-        ul {
-            margin: 0 30px;
-            line-height: 24px;
-            list-style: inside;
-            font-size: 14px;
-            list-style-type: "- ";
-
-            @media (max-width: ${breakpoints.small}) {
-                margin: 0;
-            }
+            opacity: ${active ? 1 : 0};
+            top: ${active ? 0 : "1.5rem"};
+            transition: all 1s ease-in-out;
         }
     `,
 );

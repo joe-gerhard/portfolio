@@ -20,7 +20,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
         <StyledAboutSection ref={aboutRef}>
             <SectionHeader>About me</SectionHeader>
             <Card>
-                <Text>
+                <Text active={isIntersecting}>
                     <p>
                         Rooted in the dynamic world of event production, I've
                         cultivated skills in problem-solving, clean code, and
