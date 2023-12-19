@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
 import SectionHeader from "../SectionHeader";
 
@@ -14,7 +14,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
         );
         observer.observe(aboutRef.current);
         return () => observer.disconnect();
-    }, []);
+    }, [aboutRef]);
 
     return (
         <StyledAboutSection ref={aboutRef}>
