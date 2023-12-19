@@ -5,12 +5,6 @@ import { breakpoints } from "../../constants/breakpoints";
 export const StyledAboutSection = styled(Section)(
     ({ theme }) => css`
         width: 100%;
-
-        h1 {
-            width: 100%;
-            padding-bottom: 5px;
-            border-bottom: 1px solid ${theme.dark};
-        }
     `,
 );
 
@@ -20,7 +14,6 @@ export const Card = styled.div(
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        margin: 40px 0;
         width: 100%;
 
         @media (max-width: ${breakpoints.large}) {

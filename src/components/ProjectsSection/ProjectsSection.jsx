@@ -2,12 +2,12 @@ import React from "react";
 import { StyledProjectsSection } from "./styles";
 import { PROJECTS } from "../../constants/projects";
 import Project from "./Project";
-import { H2 } from "../../styles";
+import SectionHeader from "../SectionHeader";
 
 const ProjectsSection = ({ projectsRef, scrollY }) => {
     return (
         <StyledProjectsSection ref={projectsRef}>
-            <H2>Projects</H2>
+            <SectionHeader>Projects</SectionHeader>
             {PROJECTS.map((project) => (
                 <Project
                     key={project.name}

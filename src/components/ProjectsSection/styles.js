@@ -20,7 +20,7 @@ export const StyledProject = styled.div(
         flex-direction: row;
         justify-content: flex-start;
         width: 100%;
-        margin: 40px 0 100px 0;
+        margin-bottom: 7rem;
         height: 350px;
 
         h3 {

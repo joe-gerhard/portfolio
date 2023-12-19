@@ -2,7 +2,7 @@ import React from "react";
 import { StyledContactSection } from "./styles";
 import Button from "../Button";
 import SocialBar from "../SocialBar";
-import { H2 } from "../../styles";
+import SectionHeader from "../SectionHeader";
 
 const ContactSection = ({ contactRef }) => {
     const handleEmailMe = () => {
@@ -11,7 +11,7 @@ const ContactSection = ({ contactRef }) => {
 
     return (
         <StyledContactSection ref={contactRef}>
-            <H2 textAlign="center">Contact</H2>
+            <SectionHeader textAlign="center">Contact</SectionHeader>
             <SocialBar />
             <p>
                 I am actively seeking new work opportinities, so please feel

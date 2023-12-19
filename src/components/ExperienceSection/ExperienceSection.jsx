@@ -7,14 +7,14 @@ import {
 } from "./styles";
 import Description from "./Description";
 import { JOBS } from "../../constants/jobs";
-import { H2 } from "../../styles";
+import SectionHeader from "../SectionHeader";
 
 const ExperienceSection = ({ experienceRef }) => {
     const [selected, setSelected] = useState(0);
 
     return (
         <StyledExperienceSection ref={experienceRef}>
-            <H2>Experience</H2>
+            <SectionHeader>Experience</SectionHeader>
             <ExperienceWrapper>
                 <Buttons>
                     {JOBS.map((job, idx) => (
