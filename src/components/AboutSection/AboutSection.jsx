@@ -1,32 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
 import SectionHeader from "../SectionHeader";
 
 const AboutSection = ({ aboutRef, scrollY }) => {
-    const [hover, setHover] = useState(false);
+    const [isIntersecting, setIsIntersecting] = useState(false);
 
     useEffect(() => {
-        // if the aboutRef hasn't been defined yet, do nothing
-        if (!aboutRef.current) return;
-
-        const aboutTop = aboutRef.current.offsetTop;
-        const aboutBottom = aboutTop + aboutRef.current.offsetHeight;
-
-        // if the scrollY position is within the about section, apply the hover condition
-        if (scrollY > aboutTop - 400 && scrollY < aboutBottom - 200) {
-            setHover(true);
-        } else {
-            setHover(false);
-        }
-    }, [scrollY, aboutRef]);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsIntersecting(entry.isIntersecting);
+            },
+            { rootMargin: "-50%" },
+        );
+        observer.observe(aboutRef.current);
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <StyledAboutSection ref={aboutRef}>
             <SectionHeader>About me</SectionHeader>
-            <Card
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-            >
+            <Card>
                 <Text>
                     <p>
                         Rooted in the dynamic world of event production, I've
@@ -61,7 +54,7 @@ const AboutSection = ({ aboutRef, scrollY }) => {
                         backgrounds and technical skills to innovative projects.
                     </p>
                 </Text>
-                <ImageContainer hover={hover}>
+                <ImageContainer hover={isIntersecting}>
                     <img src="/Small-Square.png" alt="Joe Gerhard" />
                     <div />
                 </ImageContainer>

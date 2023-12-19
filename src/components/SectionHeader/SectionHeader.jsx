@@ -10,7 +10,7 @@ const SectionHeader = ({ children, ...props }) => {
             ([entry]) => {
                 setIsIntersecting(entry.isIntersecting);
             },
-            { rootMargin: "100px" },
+            { rootMargin: "0px" },
         );
         observer.observe(ref.current);
         return () => observer.disconnect();
