@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
     Description,
     Text,
@@ -10,21 +10,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { useIntersectionObserver } from "../../util/useIntersectionObserver";
 
 const Project = ({ project, scrollY }) => {
-    const [isIntersecting, setIsIntersecting] = useState(false);
     const ref = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-            },
-            { rootMargin: "-25%" },
-        );
-        observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
+    const isIntersecting = useIntersectionObserver(ref, "-25%");
 
     return (
         <StyledProject ref={ref}>

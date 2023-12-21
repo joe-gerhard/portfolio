@@ -1,20 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { StyledSectionHeader } from "./styles";
+import { useIntersectionObserver } from "../../util/useIntersectionObserver";
 
 const SectionHeader = ({ children, ...props }) => {
-    const [isIntersecting, setIsIntersecting] = useState(false);
     const ref = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-            },
-            { rootMargin: "0px" },
-        );
-        observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
+    const isIntersecting = useIntersectionObserver(ref);
 
     return (
         <StyledSectionHeader

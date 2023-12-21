@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
 import SectionHeader from "../SectionHeader";
+import { useIntersectionObserver } from "../../util/useIntersectionObserver";
 
 const AboutSection = ({ aboutRef, scrollY }) => {
-    const [isIntersecting, setIsIntersecting] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-            },
-            { rootMargin: "-50%" },
-        );
-        observer.observe(aboutRef.current);
-        return () => observer.disconnect();
-    }, [aboutRef]);
+    const isIntersecting = useIntersectionObserver(aboutRef, "-50%");
 
     return (
         <StyledAboutSection ref={aboutRef}>
@@ -56,7 +46,6 @@ const AboutSection = ({ aboutRef, scrollY }) => {
                 </Text>
                 <ImageContainer hover={isIntersecting}>
                     <img src="/Small-Square.png" alt="Joe Gerhard" />
-                    <div />
                 </ImageContainer>
             </Card>
         </StyledAboutSection>
