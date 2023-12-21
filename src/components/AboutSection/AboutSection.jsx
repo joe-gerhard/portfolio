@@ -3,7 +3,7 @@ import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
 import SectionHeader from "../SectionHeader";
 import { useIntersectionObserver } from "../../util/useIntersectionObserver";
 
-const AboutSection = ({ aboutRef, scrollY }) => {
+const AboutSection = ({ aboutRef }) => {
     const isIntersecting = useIntersectionObserver(aboutRef, "-50%");
 
     return (

@@ -1,13 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { StyledApp, Sections } from "./styles";
 import Navbar from "../Navbar";
 import HomeSection from "../HomeSection/HomeSection";
 import AboutSection from "../AboutSection/AboutSection";
-import ProjectsSection from "../ProjectsSection/ProjectsSection";
-import Footer from "../Footer";
-import { StyledApp, Sections } from "./styles";
 import ExperienceSection from "../ExperienceSection/ExperienceSection";
+import ProjectsSection from "../ProjectsSection/ProjectsSection";
 import ContactSection from "../ContactSection/ContactSection";
-import { useState } from "react";
+import Footer from "../Footer";
 
 const App = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -50,11 +49,11 @@ const App = () => {
         <StyledApp>
             <Navbar executeScroll={executeScroll} {...refs} visible={visible} />
             <Sections>
-                <HomeSection {...refs} scrollY={scrollY} />
-                <AboutSection {...refs} scrollY={scrollY} />
-                <ExperienceSection {...refs} scrollY={scrollY} />
-                <ProjectsSection {...refs} scrollY={scrollY} />
-                <ContactSection {...refs} scrollY={scrollY} />
+                <HomeSection {...refs} />
+                <AboutSection {...refs} />
+                <ExperienceSection {...refs} />
+                <ProjectsSection {...refs} />
+                <ContactSection {...refs} />
             </Sections>
             <Footer executeScroll={executeScroll} {...refs} />
         </StyledApp>

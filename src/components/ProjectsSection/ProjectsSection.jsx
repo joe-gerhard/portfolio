@@ -4,16 +4,12 @@ import { PROJECTS } from "../../constants/projects";
 import Project from "./Project";
 import SectionHeader from "../SectionHeader";
 
-const ProjectsSection = ({ projectsRef, scrollY }) => {
+const ProjectsSection = ({ projectsRef }) => {
     return (
         <StyledProjectsSection ref={projectsRef}>
             <SectionHeader>Projects</SectionHeader>
             {PROJECTS.map((project) => (
-                <Project
-                    key={project.name}
-                    project={project}
-                    scrollY={scrollY}
-                />
+                <Project key={project.name} project={project} />
             ))}
         </StyledProjectsSection>
     );

@@ -12,7 +12,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { useIntersectionObserver } from "../../util/useIntersectionObserver";
 
-const Project = ({ project, scrollY }) => {
+const Project = ({ project }) => {
     const ref = useRef(null);
     const isIntersecting = useIntersectionObserver(ref, "-25%");
 
