@@ -23,7 +23,6 @@ const Project = ({ project, scrollY }) => {
                 onClick={() => window.open(project.link)}
             >
                 <img src={project.image} alt={project.name} />
-                <div />
             </ImageContainer>
             <Text>
                 <h3>Featured Project</h3>
