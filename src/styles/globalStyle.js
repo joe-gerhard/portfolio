@@ -2,7 +2,7 @@ import { css, createGlobalStyle } from "styled-components";
 import { breakpoints } from "../constants/breakpoints";
 import theme from "./theme";
 
-export const reset = css`
+export const globalStyle = css`
     /* http://meyerweb.com/eric/tools/css/reset/
    v4.0 | 20180602
    License: none (public domain)
@@ -167,6 +167,6 @@ export const reset = css`
     }
 `;
 
-export const Reset = createGlobalStyle`${reset}`;
+export const GlobalStyle = createGlobalStyle`${globalStyle}`;
 
-export default reset;
+export default globalStyle;

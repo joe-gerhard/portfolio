@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App/";
-import { Reset } from "./styles/globalStyle";
+import { GlobalStyle } from "./styles/globalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
-        <Reset />
+        <GlobalStyle />
         <App />
     </ThemeProvider>,
     document.getElementById("root"),
