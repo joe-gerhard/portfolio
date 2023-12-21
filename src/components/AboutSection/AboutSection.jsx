@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledAboutSection, Text, Card, ImageContainer } from "./styles";
 import SectionHeader from "../SectionHeader";
-import { useIntersectionObserver } from "../../util/useIntersectionObserver";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const AboutSection = ({ aboutRef }) => {
     const isIntersecting = useIntersectionObserver(aboutRef, "-50%");

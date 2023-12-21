@@ -10,7 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { useIntersectionObserver } from "../../util/useIntersectionObserver";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const Project = ({ project }) => {
     const ref = useRef(null);

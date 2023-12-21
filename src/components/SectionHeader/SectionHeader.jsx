@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { StyledSectionHeader } from "./styles";
-import { useIntersectionObserver } from "../../util/useIntersectionObserver";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const SectionHeader = ({ children, ...props }) => {
     const ref = useRef(null);

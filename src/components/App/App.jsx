@@ -7,33 +7,21 @@ import ExperienceSection from "../ExperienceSection/ExperienceSection";
 import ProjectsSection from "../ProjectsSection/ProjectsSection";
 import ContactSection from "../ContactSection/ContactSection";
 import Footer from "../Footer";
+import useScrollListener from "../../hooks/useScrollListener";
 
 const App = () => {
-    const [scrollY, setScrollY] = useState(0);
     const [visible, setVisible] = useState(true);
-
-    const handleScroll = () => {
-        const DELTA = 5;
-        const currentScrollY = window.scrollY;
-        const isVisible = scrollY > currentScrollY || scrollY < 100;
-
-        // if the user scrolls less than the value of DELTA, do nothing
-        if (Math.abs(scrollY - currentScrollY) <= DELTA) {
-            return;
-        }
-
-        setScrollY(currentScrollY);
-        setVisible(isVisible);
-    };
+    const scroll = useScrollListener();
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener("scroll", handleScroll, {
-                passive: true,
-            });
-        };
-    });
+        // if user has scrolled down more than 150px
+        // hide the navbar, otherwise show it
+        if (scroll.y > 150 && scroll.y - scroll.lastY > 0) {
+            setVisible(false);
+        } else {
+            setVisible(true);
+        }
+    }, [scroll.y, scroll.lastY]);
 
     const aboutRef = useRef();
     const experienceRef = useRef();
