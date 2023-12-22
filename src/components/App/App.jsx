@@ -23,12 +23,15 @@ const App = () => {
         }
     }, [scroll.y, scroll.lastY]);
 
+    // These refs are used for in-page navigation in the Navbar.
+    // I'm sure there's a better way to do this...
     const aboutRef = useRef();
     const experienceRef = useRef();
     const projectsRef = useRef();
     const contactRef = useRef();
     const refs = { aboutRef, experienceRef, projectsRef, contactRef };
 
+    // Helper function for scrolling to the different page sections
     const executeScroll = (ref) => {
         ref.current.scrollIntoView({ behavior: "smooth" });
     };
