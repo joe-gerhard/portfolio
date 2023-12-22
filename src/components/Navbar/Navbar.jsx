@@ -1,7 +1,6 @@
 import React from "react";
 import { StyledNav, StyledLink, Icon, Menu } from "./styles";
 import Button from "../Button";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const Navbar = ({
@@ -39,7 +38,7 @@ const Navbar = ({
             <Button dark hide onClick={handleOpenResume} margin={"20px"}>
                 Resumé
             </Button>
-            <Icon icon={faBars} onClick={handleToggleMenu} />
+            <Icon icon="fa fa-bars" onClick={handleToggleMenu} />
             <Menu isOpen={isOpen} onClick={handleToggleMenu}>
                 <StyledLink menu onClick={() => executeScroll(aboutRef)}>
                     About

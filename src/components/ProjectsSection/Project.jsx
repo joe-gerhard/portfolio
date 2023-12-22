@@ -8,8 +8,6 @@ import {
     StyledProject,
 } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const Project = ({ project }) => {
@@ -49,14 +47,14 @@ const Project = ({ project }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FontAwesomeIcon icon={faGithub} />
+                        <FontAwesomeIcon icon="fa-brands fa-github" />
                     </a>
                     <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                        <FontAwesomeIcon icon="fa fa-external-link-alt" />
                     </a>
                 </Icons>
             </Text>
